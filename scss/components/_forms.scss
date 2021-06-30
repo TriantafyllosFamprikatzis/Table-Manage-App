@@ -1,0 +1,25 @@
+/*------------------------------------*\
+  #FORMS
+\*------------------------------------*/
+
+.form-content {
+  .form-container {
+    .form-wrapper {
+      position: relative;
+
+      .user-input {
+        width: 90px;
+        padding: 11px 8px;
+      }
+
+      .posted-info-content {
+        &.show {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+        }
+      }
+    }
+  }
+}

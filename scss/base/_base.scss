@@ -1,0 +1,92 @@
+/*------------------------------------*\
+  #BASE
+\*------------------------------------*/
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+
+* {
+  box-sizing: border-box;
+}
+
+//Prevent default outline when selected
+:hover,
+:active,
+:focus,
+:visited {
+  outline: none !important;
+  outline: 0px !important;
+  box-shadow: none;
+  -webkit-appearance: none;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  min-height: 100vh;
+  font-family: "Ubuntu", sans-serif;
+  font-family: $base-font;
+}
+
+h1, h2, h3 {
+  font-family: $title-font;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 35px;
+  margin: 10px 0px 10px;
+}
+
+h2 { font-size: 2.2rem; }
+
+h3,
+li,
+button,
+input,
+select,
+textarea,
+p,
+a {
+  font-size: 1.5rem;
+}
+
+header {
+  .title-content {
+    color: $white;
+    background-color: #12171c;
+  }
+}
+
+footer {
+  padding: 5px 0;
+  color: $white;
+  background-color: #12171c;
+
+  p { 
+    margin-top: 8px;
+    font-size: 1rem;
+  }
+
+  .github {
+    background-image: url('../images/github.svg');
+    background-position: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    text-indent: -9999px;
+    margin-left: 5px;
+    width: 30px;
+    height: 30px;
+    background-size: 30px 55px;
+    opacity: 0.5;
+    transition: all 0.4s;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+}

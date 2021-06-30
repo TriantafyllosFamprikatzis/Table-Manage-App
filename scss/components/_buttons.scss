@@ -1,0 +1,47 @@
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+.btn-primary {
+  border: 3px solid $black;
+  border-radius: 15px;
+  padding: 11px 30px 11px 55px;
+  background-color: $black;
+  position: relative;
+  font-size: 1.2rem;
+  font-weight: 700;
+  transition: all .25s ease-in-out;
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 23px;
+    width: 27px;
+    height: 27px;
+  }
+
+  &:hover {
+    background-color: $black;
+    border: 3px solid $white;
+    transition: all .25s ease-in-out;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show > &.dropdown-toggle {
+    background-color: $black;
+    border-color: $white;
+  }
+}
+
+.btn-primary.focus, .btn-primary:focus {
+  box-shadow: unset;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active:focus,
+.btn-primary:not(:disabled):not(.disabled):active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: unset;
+}
+
