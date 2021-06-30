@@ -506,6 +506,42 @@ footer .github:hover {
   min-height: 550px;
   padding: 55px;
   z-index: 1;
+  overflow: hidden;
+}
+.main-container .tables-container .table-div {
+  cursor: move;
+  border: 1px solid #000;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.main-container .tables-container .table-div-two-person {
+  border-radius: 3px;
+  width: 120px;
+  height: 120px;
+}
+.main-container .tables-container .table-div-four-person {
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+}
+.main-container .tables-container .table-div .table-seat {
+  border: 1px solid #444;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  text-align: center;
+  height: 40px;
+  width: 40px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.main-container .tables-container .table-div .table-seat-one {
+  left: -30px;
+}
+.main-container .tables-container .table-div .table-seat-two {
+  right: -30px;
 }
 
 /*# sourceMappingURL=styles.css.map */

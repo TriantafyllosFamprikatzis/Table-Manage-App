@@ -14,5 +14,47 @@
     min-height: 550px;
     padding: 55px;
     z-index: 1;
+    overflow: hidden;
+
+    .table-div {
+      cursor: move;
+      border: 1px solid $black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      &-two-person {
+        border-radius: 3px;
+        width: 120px;
+        height: 120px;
+      }
+
+      &-four-person {
+        border-radius: 50%;
+        width: 200px;
+        height: 200px;
+      }
+
+      .table-seat {
+        border: 1px solid #444;
+        background-color: #f5f5f5;
+        border-radius: 50%;
+        text-align: center;
+        height: 40px;
+        width: 40px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &-one {
+          left: -30px;
+        }
+
+        &-two {
+          right: -30px;
+        }
+      }
+    }
   }
 }
