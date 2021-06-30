@@ -1,0 +1,18 @@
+/*------------------------------------*\
+  #MAIN
+\*------------------------------------*/
+
+.main-container {
+  .tables-container {
+    border-bottom: 1px solid #d9d9d9;
+    background-image: url('../images/grid.png');
+    min-width: -webkit-fill-available;
+    min-width: -moz-available;
+    min-width: fill-available;
+    background-size: 58px;
+    position: relative;
+    min-height: 550px;
+    padding: 55px;
+    z-index: 1;
+  }
+}
