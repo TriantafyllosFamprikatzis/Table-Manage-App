@@ -1,4 +1,6 @@
 $(document).ready(function(){
+
+  //Init tables functionality
   function tablesInit(event) {
     function drag_start(event) {
       const style = window.getComputedStyle(event.target, null);
@@ -25,26 +27,46 @@ $(document).ready(function(){
       table[i].addEventListener('dragstart', drag_start);
       document.body.addEventListener('dragover', drag_over);
       document.body.addEventListener('drop', drop);
-
     }
   }
 
+  //Button to create a two person table
   $("#btn1").click(function(){
     const tablesVal = document.getElementsByClassName('table-div').length;
-    $(".tables-container").append("<div draggable='true' class='table-div table-div-two-person' data-item='"+tablesVal+"'></div>");
-    $(".table-div-two-person").append("<div id='item_0' class='table-seat table-seat-one'></div>"); 
-    $(".table-div-two-person").append("<div id='item_0' class='table-seat table-seat-two'></div>");  
+
+    function twoSeatInit() {
+      let tableSeat = " ";
+
+      for (let i = 0; i < 2; i++) {
+        tableSeat += "<div class='table-seat'></div>";
+      } return tableSeat;
+    }
+
+    $(".tables-container").append("<div draggable='true' class='table-div table-div-two-person' data-item='"+tablesVal+"'><span class='remove-btn remove'>X</span> "+twoSeatInit()+"</div>");
+
     tablesInit();
   });
 
+  //Button to create a four person table
   $("#btn2").click(function(){
-    let tablesVal = document.getElementsByClassName('table-div').length;
-    $(".tables-container").append("<div draggable='true' class='table-div table-div-four-person' data-item='"+tablesVal+"'></div>");
-    $(".table-div-two-person").append("<div class='table-seat'></div>"); 
+    const tablesVal = document.getElementsByClassName('table-div').length;
+
+    function fourSeatInit() {
+      let tableSeat = " ";
+
+      for (let i = 0; i < 4; i++) {
+        tableSeat += "<div class='table-seat'></div>";
+      } return tableSeat;
+    }
+
+    $(".tables-container").append("<div draggable='true' class='table-div table-div-four-person' data-item='"+tablesVal+"'><span class='remove-btn remove'>X</span> "+fourSeatInit()+"</div>");
+
+    tablesInit();
+  });
+
+  //Event to delete a table
+  $("body").on("click", ".remove", function () {
+    $(this).closest(".table-div").remove();
     tablesInit();
   });
 });
-
-
-
-

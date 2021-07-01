@@ -384,7 +384,7 @@ h1, h2, h3 {
 
 h1 {
   font-weight: 100;
-  font-size: 35px;
+  font-size: 30px;
   margin: 10px 0px 10px;
 }
 
@@ -404,14 +404,14 @@ a {
 }
 
 header .title-content {
-  color: #fff;
-  background-color: #12171c;
+  color: #000;
+  background-color: #d9d9d9;
 }
 
 footer {
   padding: 5px 0;
-  color: #fff;
-  background-color: #12171c;
+  color: #000;
+  background-color: #d9d9d9;
 }
 footer p {
   margin-top: 8px;
@@ -438,25 +438,17 @@ footer .github:hover {
   #BUTTONS
 \*------------------------------------*/
 .btn-primary {
-  border: 3px solid #000;
-  border-radius: 15px;
-  padding: 11px 30px 11px 55px;
-  background-color: #000;
+  border: 3px solid #19b5bc;
+  border-radius: 0;
+  padding: 11px 30px;
+  background-color: #19b5bc;
   position: relative;
   font-size: 1.2rem;
   font-weight: 700;
   transition: all 0.25s ease-in-out;
 }
-.btn-primary:before {
-  content: "";
-  position: absolute;
-  top: 7px;
-  left: 23px;
-  width: 27px;
-  height: 27px;
-}
 .btn-primary:hover {
-  background-color: #000;
+  background-color: #169fa5;
   border: 3px solid #fff;
   transition: all 0.25s ease-in-out;
 }
@@ -475,21 +467,29 @@ footer .github:hover {
   box-shadow: unset;
 }
 
-/*------------------------------------*\
-  #FORMS
-\*------------------------------------*/
-.form-content .form-container .form-wrapper {
-  position: relative;
-}
-.form-content .form-container .form-wrapper .user-input {
-  width: 90px;
-  padding: 11px 8px;
-}
-.form-content .form-container .form-wrapper .posted-info-content.show {
+.remove {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 15px;
+  background-color: #d9d9d9;
+  padding: 3px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.25s ease-in-out;
+}
+
+.table-div:hover .remove {
+  visibility: visible;
+  opacity: 1;
+}
+.table-div-two-person .remove {
+  top: -30px;
+  left: -30px;
+}
+.table-div-four-person .remove {
+  top: -10px;
+  left: -5px;
 }
 
 /*------------------------------------*\
@@ -503,7 +503,7 @@ footer .github:hover {
   min-width: fill-available;
   background-size: 58px;
   position: relative;
-  min-height: 550px;
+  min-height: 80vh;
   padding: 55px;
   z-index: 1;
   overflow: hidden;
@@ -523,8 +523,8 @@ footer .github:hover {
 }
 .main-container .tables-container .table-div-four-person {
   border-radius: 50%;
-  width: 200px;
-  height: 200px;
+  width: 170px;
+  height: 170px;
 }
 .main-container .tables-container .table-div .table-seat {
   border: 1px solid #444;
@@ -537,11 +537,23 @@ footer .github:hover {
   top: 50%;
   transform: translateY(-50%);
 }
-.main-container .tables-container .table-div .table-seat-one {
+.main-container .tables-container .table-div .table-seat:nth-child(2) {
   left: -30px;
 }
-.main-container .tables-container .table-div .table-seat-two {
+.main-container .tables-container .table-div .table-seat:nth-child(3) {
   right: -30px;
+}
+.main-container .tables-container .table-div .table-seat:nth-child(4) {
+  right: 25%;
+  transform: translateX(-50%);
+  top: -30px;
+}
+.main-container .tables-container .table-div .table-seat:nth-child(5) {
+  right: unset;
+  left: 50%;
+  transform: translateX(-50%);
+  top: unset;
+  bottom: -30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
