@@ -3,26 +3,17 @@
 \*------------------------------------*/
 
 .btn-primary {
-  border: 3px solid $black;
-  border-radius: 15px;
-  padding: 11px 30px 11px 55px;
-  background-color: $black;
+  border: 3px solid $java;
+  border-radius: 0;
+  padding: 11px 30px;
+  background-color: $java;
   position: relative;
   font-size: 1.2rem;
   font-weight: 700;
   transition: all .25s ease-in-out;
 
-  &:before {
-    content: "";
-    position: absolute;
-    top: 7px;
-    left: 23px;
-    width: 27px;
-    height: 27px;
-  }
-
   &:hover {
-    background-color: $black;
+    background-color: darken($java, 5%);
     border: 3px solid $white;
     transition: all .25s ease-in-out;
   }
@@ -45,3 +36,37 @@
   box-shadow: unset;
 }
 
+.remove {
+  position: absolute;
+  font-size: 15px;
+  background-color: $alto;
+  padding: 3px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  visibility: hidden;
+  opacity: 0;
+  transition: all .25s ease-in-out;
+}
+
+.table-div {
+  &:hover {
+    .remove {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+  &-two-person {
+    .remove {
+      top: -30px;
+      left: -30px;
+    }
+  }
+
+  &-four-person {
+    .remove {
+      top: -10px;
+      left: -5px;
+    }
+  }
+}
